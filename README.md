@@ -5,14 +5,15 @@ Production-ready platform for evaluating, logging, and monitoring LLM applicatio
 ## Features
 
 - Prompt/response trace logging
-- Evaluation metrics for quality, latency, cost, and safety
-- Dataset-based offline evaluation
+- Quality, safety, latency, and cost scoring
+- Evaluator service with overall score calculation
 - FastAPI evaluation API
-- CLI workflows for demo and batch evaluation
+- CLI workflows for demo and one-off evaluation
 - JSONL trace storage
 - Docker and Docker Compose deployment
 - GitHub Actions CI
 - Pytest test suite
+- Architecture and deployment documentation
 
 ## Quickstart
 
@@ -32,8 +33,20 @@ curl -X POST http://localhost:8000/evaluate \
   -d @sample_eval.json
 ```
 
+## Docker
+
+```bash
+docker-compose up --build
+```
+
+## Docs
+
+- `ARCHITECTURE.md`
+- `DEPLOYMENT.md`
+- `sample_eval.json`
+
 ## Portfolio Highlights
 
 - Demonstrates LLMOps, model evaluation, observability, API design, and production engineering
 - Useful for RAG, chatbot, agent, and prompt-engineering workflows
-- Clear foundation for LangSmith-style tracing, dashboards, and production monitoring
+- Clear foundation for LangSmith-style tracing, dashboards, alerting, RAG metrics, and production monitoring
