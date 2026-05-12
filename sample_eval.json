@@ -1,0 +1,7 @@
+{
+  "prompt": "Explain how RAG evaluation works.",
+  "response": "RAG evaluation measures retrieval quality, answer quality, citations, latency, and cost.",
+  "expected_keywords": ["retrieval", "quality", "citations", "latency", "cost"],
+  "latency_ms": 850,
+  "cost_usd": 0.01
+}
