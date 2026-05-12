@@ -1,0 +1,23 @@
+[project]
+name = "llm-observability-evaluation-suite"
+version = "0.1.0"
+description = "Production-ready LLM observability and evaluation suite"
+requires-python = ">=3.10"
+dependencies = ["fastapi", "uvicorn[standard]", "pydantic", "typer", "rich"]
+
+[project.optional-dependencies]
+dev = ["pytest", "httpx", "ruff"]
+
+[project.scripts]
+llmobs = "llm_observability.cli:app"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
