@@ -1,19 +1,23 @@
 # LLM Observability Evaluation Suite
 
-Production-ready platform for evaluating, logging, and monitoring LLM application quality across prompts, responses, latency, cost, safety, and retrieval quality.
+Deployable LLMOps evaluation service for monitoring prompt quality, safety, latency, cost, alerts, and traceability across LLM applications.
 
-## Features
+## Core Capabilities
 
-- Prompt/response trace logging
+- Prompt and response evaluation API
 - Quality, safety, latency, and cost scoring
-- Evaluator service with overall score calculation
-- FastAPI evaluation API
+- Run IDs for evaluation traceability
+- App name, prompt version, user, and session metadata
+- Configurable alert thresholds for quality, cost, and latency
+- Evaluator version returned with every result
+- JSONL trace stream for local demo and audit workflows
+- FastAPI `/evaluate` endpoint
 - CLI workflows for demo and one-off evaluation
-- JSONL trace storage
+- Runtime configuration through environment variables
 - Docker and Docker Compose deployment
 - GitHub Actions CI
-- Pytest test suite
-- Architecture and deployment documentation
+- Pytest coverage
+- Operations runbook and architecture decision record
 
 ## Quickstart
 
@@ -39,14 +43,23 @@ curl -X POST http://localhost:8000/evaluate \
 docker-compose up --build
 ```
 
-## Docs
+## Runtime Configuration
+
+See `.env.example` for environment, evaluator version, trace store, and alert threshold settings.
+
+## Documentation
 
 - `ARCHITECTURE.md`
 - `DEPLOYMENT.md`
+- `OPERATIONS.md`
+- `docs/adr-001-evaluation-service-layer.md`
 - `sample_eval.json`
 
-## Portfolio Highlights
+## Production Roadmap
 
-- Demonstrates LLMOps, model evaluation, observability, API design, and production engineering
-- Useful for RAG, chatbot, agent, and prompt-engineering workflows
-- Clear foundation for LangSmith-style tracing, dashboards, alerting, RAG metrics, and production monitoring
+- Database-backed trace storage
+- Prompt/version dashboards
+- LLM-as-judge evaluators
+- RAG faithfulness and retrieval metrics
+- Alert integrations
+- Scheduled regression suites for prompt releases
