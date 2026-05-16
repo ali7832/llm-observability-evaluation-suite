@@ -2,6 +2,12 @@
 
 Deployable LLMOps evaluation service for monitoring prompt quality, safety, latency, cost, alerts, and traceability across LLM applications, with a premium multi-page React command center for AI platform teams.
 
+## Product Demo Video
+
+
+https://github.com/user-attachments/assets/e34d4114-5b09-4d88-a4cd-55948cff62e9
+
+
 ## Core Capabilities
 
 - Prompt and response evaluation API
