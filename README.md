@@ -1,6 +1,6 @@
 # LLM Observability Evaluation Suite
 
-Deployable LLMOps evaluation service for monitoring prompt quality, safety, latency, cost, alerts, and traceability across LLM applications.
+Deployable LLMOps evaluation service for monitoring prompt quality, safety, latency, cost, alerts, and traceability across LLM applications, with a premium multi-page React command center for AI platform teams.
 
 ## Core Capabilities
 
@@ -18,6 +18,7 @@ Deployable LLMOps evaluation service for monitoring prompt quality, safety, late
 - GitHub Actions CI
 - Pytest coverage
 - Operations runbook and architecture decision record
+- Multi-page React/Vite LLMOps observability frontend
 
 ## Quickstart
 
@@ -27,6 +28,30 @@ llmobs demo
 uvicorn llm_observability.api:app --reload
 pytest -q
 ```
+
+## Frontend LLMOps Control Center
+
+The `frontend/` directory contains a premium React/Vite dashboard for LLM monitoring, evaluation, prompt regression, and release governance.
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173`.
+
+Frontend pages:
+
+- Overview: evaluation volume, quality, latency, cost, and trend charts
+- Live Traces: prompt trace stream with app, version, score, cost, and latency
+- Evaluation Lab: interactive prompt/response quality and safety evaluation
+- Regression Suite: prompt release regression runs and golden-test scorecards
+- Model Compare: quality-vs-cost comparison across model choices
+- Alerts: quality, latency, and cost alert center
+- Release Gates: release decision panel with quality, safety, latency, and budget thresholds
+
+The UI attempts to call `/evaluate` and falls back to demo LLMOps intelligence when the backend is offline.
 
 ## API
 
